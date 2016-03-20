@@ -1,0 +1,5 @@
+set -x
+#python smo_serial.py ../dataset/heart_scale ../dataset/heart_scale.out 1 0.1
+python svm.py ../dataset/fjrtest.txt ./MDLPY/micsvmpy.mdl 1 0.1
+#python linsmo.py ../dataset/fjrtest.txt ./MDLPY/micsvmpy.mdl 1000 7
+./svm-predict ../dataset/fjrtest.txt MDLPY/micsvmpy.mdl out
